@@ -1,4 +1,3 @@
-﻿# Use official Python image
 FROM python:3.11-slim
 
 # Set environment variables
@@ -14,6 +13,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy project files
 COPY . /app/
+
+# Set the working directory to where manage.py is located
+WORKDIR /app/myproject
 
 # Collect static files
 RUN python manage.py collectstatic --noinput
