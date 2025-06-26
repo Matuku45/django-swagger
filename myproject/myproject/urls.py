@@ -30,7 +30,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/swagger/', permanent=False)),
 
     # Admin interface
-    path('admin/', admin.site.urls),
+    
 
     # Include your app's URLs (e.g., /people/)
     path('api/', include('myapp.urls')),
