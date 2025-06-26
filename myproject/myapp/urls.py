@@ -2,7 +2,6 @@ from django.urls import path
 from .views import PersonListCreate, PersonUpdateDelete
 
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 urlpatterns = [
